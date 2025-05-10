@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poiret+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pink : rgba(202, 144, 189, 1);
+  --color-header : rgba(34, 30, 30, 0.74);
+  --color-beige : rgba(176, 176, 176, 1);
+  --font-inter : "Inter", "sans-serif";
+  --font-oldstandart : "Old Standard TT", "serif";
+}
