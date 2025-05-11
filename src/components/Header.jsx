@@ -4,28 +4,28 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header className="fixed top-0 left-0 w-full bg-header shadow-md z-50">
-            <nav className=' px-10 py-4'>
-                <div className='flex justify-between items-center'>
+            <nav className=' px-10 py-3 md:px-15 md:py-5'>
+                <div className='flex justify-between'>
                     <a href="#">
                         <img className='md:w-40' src={logo} alt="Logo"/>
                     </a>
-                    <button className={`md:hidden flex flex-col w-6 h-6 z-52 relative ${menuOpen ? 'justify-around' : 'justify-center'}`} onClick={() => setMenuOpen(!menuOpen)}>
+                    <button className={`md:hidden w-8 z-52 cursor-pointer relative flex flex-col justify-center items-center`} onClick={() => setMenuOpen(!menuOpen)}>
                         <span
-                            className={`block h-0.5 w-4 bg-pink transition-transform duration-300 ease-in-out ${
-                            menuOpen ? 'w-6 transform rotate-45 translate-y-1.5' : '-translate-y-1'
+                            className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
+                            menuOpen ? 'w-8 transform rotate-45 top-2.5' : 'w-5 rotate-0 top-1'
                             }`}
                         />
                         <span
-                            className={`block h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
-                            menuOpen ? 'transform -rotate-45 -translate-y-1.5' : 'translate-y-1'
+                            className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
+                            menuOpen ? 'w-8 transform -rotate-45 bottom-2.5' : ' w-8 rotate-0 bottom-1'
                             }`}
                         />
                     </button>
                     <nav className="hidden md:block">
                         <ul className="flex space-x-8">
-                            <li><a href="#" className ="text-pink text-[25px] font-inter font-semibold">О нас</a></li>
-                            <li><a href="#" className="text-pink text-[25px] font-inter font-semibold">Расписание</a></li>
-                            <li><a href="#" className="text-pink text-[25px] font-inter font-semibold">Прайс</a></li>
+                            <li><a href="#" className ="text-pink text-[25px]">О нас</a></li>
+                            <li><a href="#" className="text-pink text-[25px] ">Расписание</a></li>
+                            <li><a href="#" className="text-pink text-[25px]">Прайс</a></li>
                         </ul>
                     </nav>
                     {menuOpen && <nav className='md:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
@@ -36,9 +36,9 @@ const Header = () => {
 
                         </div>
                         <ul className='flex flex-col justify-center items-center h-full'>
-                            <li className='mb-5'><a href="#" className ="text-pink text-[30px] font-inter font-semibold">О нас</a></li>
-                            <li className='mb-5'><a href="#" className="text-pink text-[30px] font-inter font-semibold">Расписание</a></li>
-                            <li><a href="#" className="text-pink text-[30px] font-inter font-semibold">Прайс</a></li>
+                            <li className='mb-5'><a href="#" className ="text-pink text-[30px]">О нас</a></li>
+                            <li className='mb-5'><a href="#" className="text-pink text-[30px]">Расписание</a></li>
+                            <li><a href="#" className="text-pink text-[30px] ">Прайс</a></li>
                         </ul>
                     </nav>}
                 </div>
