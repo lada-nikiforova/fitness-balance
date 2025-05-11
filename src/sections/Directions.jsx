@@ -32,20 +32,20 @@ const Directions = () => {
     return (
         <section className='bg-center bg-no-repeat min-h-[500px] md:h-[800px] flex flex-col items-center py-2 '>
             <div className="w-full max-w-[290px] md:max-w-[1180px] ">
-                <h1 className='text-[18px] font-bold text-dark mb-[8px] text-start md:text-[30px] md:mb-4'>
+                <h2 className='text-[18px] font-bold text-dark mb-[8px] text-start md:text-[30px] md:mb-4'>
                 НАШИ НАПРАВЛЕНИЯ
-                </h1>
+                </h2>
             </div>
-            <div className='flex flex-col md:flex-row justify-between'>
+            <div className='flex flex-col md:flex-row justify-between text-xs md:text-2xl'>
                 <div className='bg-white w-full max-w-[290px] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
                     <div className='flex flex-wrap gap-[5px] mb-[8px] md:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
-                        <button key={id} className={`border-[2px] text-[12px] md:text-base rounded-full px-[12px] md:px-[24px] py-[6px] md:py-[12px] font-semibold cursor-pointer shadow-sm hover:shadow-xl
+                        <button key={id} className={`border-[2px] rounded-full px-[12px] md:px-[24px] py-[6px] md:py-[12px] font-semibold cursor-pointer shadow-sm hover:shadow-xl
                             ${activeDirection === id ? 'bg-pink text-dark  border-pink'
                             : 'bg-white text-lightdark border-pink hover:shadow-xl hover:bg-pink hover:text-dark active:bg-pink active:text-dark'}`} 
                             onClick={() => setActiveDirection(id)}>{label}</button>))}
                     </div>
-                    <div className='text-[12px] font-semibold md:text-[16px]'>
+                    <div className='font-semibold'>
                         <div className='text-dark mb-[12px]'>
                             {directionText[activeDirection].split('\n').map((para, index) => (<p key={index} className="mb-[6px]">{para}</p>))}
                         </div>

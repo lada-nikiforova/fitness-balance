@@ -4,20 +4,20 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header className="fixed top-0 left-0 w-full bg-header shadow-md z-50">
-            <nav className=' px-10 py-3 md:px-15 md:py-5'>
+            <nav className=' px-10 py-4 md:px-15 md:py-5'>
                 <div className='flex justify-between'>
                     <a href="#">
-                        <img className='md:w-40' src={logo} alt="Logo"/>
+                        <img className='w-27 md:w-40' src={logo} alt="Logo"/>
                     </a>
                     <button className={`md:hidden w-8 z-52 cursor-pointer relative flex flex-col justify-center items-center`} onClick={() => setMenuOpen(!menuOpen)}>
                         <span
                             className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
-                            menuOpen ? 'w-8 transform rotate-45 top-2.5' : 'w-5 rotate-0 top-1'
+                            menuOpen ? 'w-7 transform rotate-45 top-2.5' : 'w-6 rotate-0 top-1'
                             }`}
                         />
                         <span
                             className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
-                            menuOpen ? 'w-8 transform -rotate-45 bottom-2.5' : ' w-8 rotate-0 bottom-1'
+                            menuOpen ? 'w-7 transform -rotate-45 bottom-2.5' : ' w-9 rotate-0 bottom-1'
                             }`}
                         />
                     </button>
@@ -31,9 +31,8 @@ const Header = () => {
                     {menuOpen && <nav className='md:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
                         <div className='px-10 py-4'>
                             <a href="#">
-                                <img className='md:w-40' src={logo} alt="Logo"/>
+                                <img className='w-27' src={logo} alt="Logo"/>
                             </a>
-
                         </div>
                         <ul className='flex flex-col justify-center items-center h-full'>
                             <li className='mb-5'><a href="#" className ="text-pink font-semibold text-[30px]">О нас</a></li>
