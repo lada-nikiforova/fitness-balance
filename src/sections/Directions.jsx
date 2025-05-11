@@ -30,30 +30,30 @@ const Directions = () => {
         kidsAero: kidsAeroImage,
     }
     return (
-        <section className='bg-center bg-no-repeat min-h-sm md:h-3xl flex flex-col items-center py-2 '>
-            <div className="w-full max-w-2xs md:max-w-6xl ">
-                <h1 className='text-lg font-bold text-dark mb-3 text-start md:text-3xl md:mb-4'>
+        <section className='bg-center bg-no-repeat min-h-[500px] md:h-[800px] flex flex-col items-center py-2 '>
+            <div className="w-full max-w-[290px] md:max-w-[1180px] ">
+                <h1 className='text-[18px] font-bold text-dark mb-[8px] text-start md:text-[30px] md:mb-4'>
                 НАШИ НАПРАВЛЕНИЯ
                 </h1>
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
-                <div className='bg-white w-2xs min-h-56 rounded-2xl shadow-sm p-3 mb-3 md:w-xl md:min-h-155 md:mr-5 flex flex-col justify-between md:p-5'>
-                    <div className='flex flex-wrap gap-1 mb-3 md:gap-2'>
+                <div className='bg-white w-full max-w-[290px] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
+                    <div className='flex flex-wrap gap-[5px] mb-[12px] md:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
-                        <button key={id} className={`bg-wight border-2 text-xs md:text-base rounded-full px-4 md:px-6 py-2 md:py-3 cursor-pointer shadow-sm hover:shadow-xl
+                        <button key={id} className={`bg-wight border-[2px] text-[12px] md:text-base rounded-full px-[15px] md:px-[24px] py-[6px] md:py-[12px] cursor-pointer shadow-sm hover:shadow-xl
                             ${activeDirection === id ? 'bg-pink text-dark border-pink'
                             : 'bg-white text-lightdark border-pink hover:shadow-xl hover:bg-pink hover:text-dark active:bg-pink active:text-dark'}`} 
                             onClick={() => setActiveDirection(id)}>{label}</button>))}
                     </div>
-                    <div>
-                        <div className='text-dark text-xs md:text-base mb-3'>
-                            {directionText[activeDirection].split('\n').map((para, index) => (<p key={index} className="mb-2">{para}</p>))}
+                    <div className='text-[12px] md:text-[16px]'>
+                        <div className='text-dark mb-[12px]'>
+                            {directionText[activeDirection].split('\n').map((para, index) => (<p key={index} className="mb-[6px]">{para}</p>))}
                         </div>
-                        <div className='text-xs md:text-base'><p>Продолжительность занятия ~ 55 минут</p></div>
+                        <div><p>Продолжительность занятия ~ 55 минут</p></div>
                     </div>
                     
                 </div>
-                <div className='bg-white w-2xs h-56 md:w-xl md:min-h-155 rounded-2xl shadow-sm'>
+                <div className='bg-white w-full max-w-[290px] h-[215px] md:max-w-[580px] md:h-[620px] rounded-[16px] shadow-sm'>
                         <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
                 </div>
 
