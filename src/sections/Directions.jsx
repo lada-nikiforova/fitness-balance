@@ -37,7 +37,7 @@ const Directions = () => {
                 </h2>
             </div>
             <div className='flex flex-col md:flex-row justify-between text-xs md:text-2xl'>
-                <div className='bg-white w-full max-w-[290px] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
+                <div className='bg-white w-full max-w-[90vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
                     <div className='flex flex-wrap gap-[5px] mb-[8px] md:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
                         <button key={id} className={`border-[2px] rounded-full px-[12px] md:px-[24px] py-[6px] md:py-[12px] font-semibold cursor-pointer shadow-sm hover:shadow-xl
@@ -53,7 +53,7 @@ const Directions = () => {
                     </div>
                     
                 </div>
-                <div className='bg-white w-full max-w-[290px] h-[215px] md:max-w-[580px] md:h-[620px] rounded-[16px] shadow-sm'>
+                <div className='bg-white w-full max-w-[90vw] h-[215px] md:max-w-[580px] md:h-[620px] rounded-[16px] shadow-sm'>
                         <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
                 </div>
 
