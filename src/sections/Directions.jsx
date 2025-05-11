@@ -38,14 +38,14 @@ const Directions = () => {
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
                 <div className='bg-white w-full max-w-[290px] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
-                    <div className='flex flex-wrap gap-[5px] mb-[12px] md:gap-[8px]'>
+                    <div className='flex flex-wrap gap-[5px] mb-[8px] md:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
-                        <button key={id} className={`border-[2px] text-[12px] md:text-base rounded-full px-[15px] md:px-[24px] py-[6px] md:py-[12px] cursor-pointer shadow-sm hover:shadow-xl
-                            ${activeDirection === id ? 'bg-pink text-dark border-pink'
+                        <button key={id} className={`border-[2px] text-[12px] md:text-base rounded-full px-[12px] md:px-[24px] py-[6px] md:py-[12px] font-semibold cursor-pointer shadow-sm hover:shadow-xl
+                            ${activeDirection === id ? 'bg-pink text-dark  border-pink'
                             : 'bg-white text-lightdark border-pink hover:shadow-xl hover:bg-pink hover:text-dark active:bg-pink active:text-dark'}`} 
                             onClick={() => setActiveDirection(id)}>{label}</button>))}
                     </div>
-                    <div className='text-[12px] md:text-[16px]'>
+                    <div className='text-[12px] font-semibold md:text-[16px]'>
                         <div className='text-dark mb-[12px]'>
                             {directionText[activeDirection].split('\n').map((para, index) => (<p key={index} className="mb-[6px]">{para}</p>))}
                         </div>

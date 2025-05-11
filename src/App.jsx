@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="bg-beige font-inter box-border">
         <Home/>
       </div>
     </>

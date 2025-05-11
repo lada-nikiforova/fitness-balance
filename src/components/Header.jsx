@@ -23,9 +23,9 @@ const Header = () => {
                     </button>
                     <nav className="hidden md:block">
                         <ul className="flex space-x-8">
-                            <li><a href="#" className ="text-pink text-[25px]">О нас</a></li>
-                            <li><a href="#" className="text-pink text-[25px] ">Расписание</a></li>
-                            <li><a href="#" className="text-pink text-[25px]">Прайс</a></li>
+                            <li><a href="#" className ="text-pink font-semibold text-[25px]">О нас</a></li>
+                            <li><a href="#" className="text-pink font-semibold text-[25px] ">Расписание</a></li>
+                            <li><a href="#" className="text-pink font-semibold text-[25px]">Прайс</a></li>
                         </ul>
                     </nav>
                     {menuOpen && <nav className='md:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
@@ -36,9 +36,9 @@ const Header = () => {
 
                         </div>
                         <ul className='flex flex-col justify-center items-center h-full'>
-                            <li className='mb-5'><a href="#" className ="text-pink text-[30px]">О нас</a></li>
-                            <li className='mb-5'><a href="#" className="text-pink text-[30px]">Расписание</a></li>
-                            <li><a href="#" className="text-pink text-[30px] ">Прайс</a></li>
+                            <li className='mb-5'><a href="#" className ="text-pink font-semibold text-[30px]">О нас</a></li>
+                            <li className='mb-5'><a href="#" className="text-pink font-semibold text-[30px]">Расписание</a></li>
+                            <li><a href="#" className="text-pink font-semibold text-[30px] ">Прайс</a></li>
                         </ul>
                     </nav>}
                 </div>
