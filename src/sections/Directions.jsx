@@ -30,14 +30,14 @@ const Directions = () => {
         kidsAero: kidsAeroImage,
     }
     return (
-        <section className='bg-center bg-no-repeat min-h-[500px] md:h-[800px] flex flex-col items-center py-2 '>
-            <div className="w-full max-w-[290px] md:max-w-[1160px] ">
+        <section className='bg-center bg-no-repeat min-h-sm md:h-3xl flex flex-col items-center py-2 '>
+            <div className="w-full max-w-2xs md:max-w-6xl ">
                 <h1 className='text-lg font-bold text-dark mb-3 text-start md:text-3xl md:mb-4'>
                 НАШИ НАПРАВЛЕНИЯ
                 </h1>
             </div>
             <div className='flex flex-col md:flex-row justify-between'>
-                <div className='bg-white w-[290px] min-h-[215px] rounded-2xl shadow-sm p-3 mb-3 md:w-[580px] md:min-h-[620px] md:mr-5 flex flex-col justify-between md:p-5'>
+                <div className='bg-white w-2xs min-h-56 rounded-2xl shadow-sm p-3 mb-3 md:w-xl md:min-h-155 md:mr-5 flex flex-col justify-between md:p-5'>
                     <div className='flex flex-wrap gap-1 mb-3 md:gap-2'>
                     {directions.map(({ id, label }) => ( 
                         <button key={id} className={`bg-wight border-2 text-xs md:text-base rounded-full px-4 md:px-6 py-2 md:py-3 cursor-pointer shadow-sm hover:shadow-xl
@@ -53,7 +53,7 @@ const Directions = () => {
                     </div>
                     
                 </div>
-                <div className='bg-white w-[290px] h-[215px] md:w-[580px] md:min-h-[620px] rounded-2xl shadow-sm'>
+                <div className='bg-white w-2xs h-56 md:w-xl md:min-h-155 rounded-2xl shadow-sm'>
                         <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
                 </div>
 

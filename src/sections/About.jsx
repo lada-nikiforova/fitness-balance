@@ -2,7 +2,7 @@ import back from '../images/fitness.jpg'
 
 const About = () => {
   return (
-    <section className="bg-cover bg-center bg-no-repeat h-[480px] md:h-[800px] flex items-center justify-center mb-1 md:mb-3 " 
+    <section className="bg-cover bg-center bg-no-repeat h-120 md:h-200 flex items-center justify-center mb-1 md:mb-3 " 
             style={{ backgroundImage: `linear-gradient(rgba(34, 30, 30, 0.44), rgba(34, 30, 30, 0.7)), url(${back})`}} >
         <div className='flex flex-col items-center justify-center ml-1 mr-1 gap-2 md:gap-4 px-4'>
             <h1 className='text-center text-beige text-xl md:text-6xl font-bold drop-shadow-sm'>СТУДИЯ РАСТЯЖКИ И ТАНЦЕВ<br/>В НИЖНЕМ НОВГОРОДЕ</h1>
