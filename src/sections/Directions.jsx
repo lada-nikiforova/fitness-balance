@@ -30,22 +30,22 @@ const Directions = () => {
         kidsAero: kidsAeroImage,
     }
     return (
-        <section className='bg-center bg-no-repeat min-h-[500px] md:h-[800px] flex flex-col items-center py-2 '>
-            <div className="w-full max-w-[290px] md:max-w-[1180px] ">
-                <h2 className='text-[18px] font-bold text-dark mb-[8px] text-start md:text-[30px] md:mb-4'>
+        <section className='bg-center bg-no-repeat min-h-[500px] lg:h-[800px] flex flex-col items-center py-2 '>
+            <div className="w-full max-w-[90vw] lg:max-w-[90vw] ">
+                <h2 className='text-xl md:text-2xl font-bold text-dark mb-[8px] text-start lg:text-4xl lg:mb-4'>
                 НАШИ НАПРАВЛЕНИЯ
                 </h2>
             </div>
-            <div className='flex flex-col md:flex-row justify-between text-xs md:text-2xl'>
-                <div className='bg-white w-full max-w-[90vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:max-w-[580px] md:min-h-[620px] md:mr-[20px] flex flex-col justify-between md:p-[20px]'>
-                    <div className='flex flex-wrap gap-[5px] mb-[8px] md:gap-[8px]'>
+            <div className='flex flex-col md:flex-row justify-between text-xs md:text-sm lg:text-2xl md:max-w-[90vw]'>
+                <div className='bg-white w-full max-w-[90vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:min-h-[400px] lg:min-h-[620px] md:mr-[15px] lg:mr-[20px] flex flex-col justify-between lg:p-[20px]'>
+                    <div className='flex flex-wrap gap-[5px] mb-[8px] lg:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
-                        <button key={id} className={`border-[2px] rounded-full px-[12px] md:px-[24px] py-[6px] md:py-[12px] font-semibold cursor-pointer shadow-sm hover:shadow-xl
+                        <button key={id} className={`border-[2px] rounded-full px-[12px] lg:px-[24px] py-[6px] lg:py-[12px] cursor-pointer shadow-sm hover:shadow-xl
                             ${activeDirection === id ? 'bg-pink text-dark  border-pink'
                             : 'bg-white text-lightdark border-pink hover:shadow-xl hover:bg-pink hover:text-dark active:bg-pink active:text-dark'}`} 
                             onClick={() => setActiveDirection(id)}>{label}</button>))}
                     </div>
-                    <div className='font-semibold'>
+                    <div >
                         <div className='text-dark mb-[12px]'>
                             {directionText[activeDirection].split('\n').map((para, index) => (<p key={index} className="mb-[6px]">{para}</p>))}
                         </div>
@@ -53,8 +53,8 @@ const Directions = () => {
                     </div>
                     
                 </div>
-                <div className='bg-white w-full max-w-[90vw] h-[215px] md:max-w-[580px] md:h-[620px] rounded-[16px] shadow-sm'>
-                        <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
+                <div className='bg-white w-full max-w-[90vw] h-[260px] md:h-[400px]  lg:h-[620px] rounded-[16px] shadow-sm'>
+                        <img className='w-full h-full object-cover  rounded-2xl' src={directionImage[activeDirection]} />  
                 </div>
 
             </div>
