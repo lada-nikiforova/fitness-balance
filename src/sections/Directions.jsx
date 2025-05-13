@@ -40,7 +40,7 @@ const Directions = () => {
                 <div className='bg-white w-full max-w-[90vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:min-h-[400px] lg:min-h-[620px] md:mr-[15px] lg:mr-[20px] flex flex-col justify-between lg:p-[20px]'>
                     <div className='flex flex-wrap gap-[5px] mb-[8px] lg:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
-                        <button key={id} className={`border-[1px] md:border-[2px] rounded-full text-center px-[14px] lg:px-[24px] py-[6px] lg:py-[12px] font-[600] cursor-pointer shadow-sm hover:shadow-xl
+                        <button key={id} className={`border-[1px] md:border-[2px] font-bold rounded-full text-center px-[14px] lg:px-[24px] py-[6px] lg:py-[12px]  cursor-pointer shadow-sm hover:shadow-xl
                             ${activeDirection === id ? 'bg-pink text-dark  border-pink'
                             : 'bg-white text-lightdark border-pink hover:shadow-xl hover:bg-pink hover:text-dark active:bg-pink active:text-dark'}`} 
                             onClick={() => setActiveDirection(id)}>{label}</button>))}

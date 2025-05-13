@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-beige font-involve box-border">
+      <div className="bg-beige font-montserrat box-border">
         <Home/>
       </div>
     </>
