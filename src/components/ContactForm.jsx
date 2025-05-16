@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-
+import InputMask from 'react-input-mask';
+import PhoneInput from 'react-phone-number-input';
+import Cleave from 'cleave.js/react';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,30 +14,6 @@ const ContactForm = () => {
     phone: '',
     contactMethod: '',
   });
-
-  const formatPhone = (value) => {
-    const digits = value.replace(/\D/g, '');
-
-    let formatted = '+7';
-    if (digits.length > 1) formatted += ` (${digits.slice(1, 4)}`;
-    if (digits.length >= 4) formatted += `) ${digits.slice(4, 7)}`;
-    if (digits.length >= 7) formatted += `-${digits.slice(7, 9)}`;
-    if (digits.length >= 9) formatted += `-${digits.slice(9, 11)}`;
-
-    return formatted;
-  };
-
-  const handlePhoneChange = (e) => {
-    const raw = e.target.value;
-    const digits = raw.replace(/\D/g, '');
-    const limited = digits.slice(0, 11); 
-
-    setFormData((prev) => ({
-      ...prev,
-      phone: formatPhone(limited),
-    }));
-    setErrors((prev) => ({ ...prev, phone: '' }));
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -111,13 +89,13 @@ const ContactForm = () => {
         <label className="block  font-medium mb-1" htmlFor="phone">
           Телефон
         </label>
-        <input
+        
+        <Cleave
+          options={{ prefix: '+7', blocks: [2, 0, 3, 0, 3, 2, 2], delimiters: [' ','(', ')', ' ', '-',  '-', '-'], numericOnly: true }}
           id="phone"
           name="phone"
-          type="tel"
           value={formData.phone}
-          onChange={handlePhoneChange}
-          placeholder="+7 (___) ___-__-__"
+          onChange={handleChange}
           className={`w-full px-4 py-2 border border-dark rounded-[20px] focus:outline-none focus:ring ${
             errors.phone ? 'border-red-500' : 'focus:ring-pink'
           }`}

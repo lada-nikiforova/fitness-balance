@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",
+    "cleave.js": "^1.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-input-mask": "^2.0.4",
+    "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.6.0",
     "tailwindcss": "^4.1.6"
   },
