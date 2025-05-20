@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import scheduleImage from '../images/schedule.svg'
+import Footer from '../components/Footer';
 
 const Schedule = () => {
     useEffect(() => {
         window.scrollTo(0, 0); 
     }, []);
   return (
+    <>
     <section className='flex justify-center items-center px-4 py-6 pt-[60px] md:pt-[80px] lg:pt-[100px]'>
       <Header/>
       <img
@@ -15,6 +17,8 @@ const Schedule = () => {
         className="max-w-full h-auto rounded-xl shadow-lg"
       />
     </section>
+    <Footer/>
+    </>
   )
 }
 

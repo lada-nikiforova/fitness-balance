@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import aeroImage from '../images/aerostretching.jpg';
 import mfrImage from '../images/mfr.jpg';
 import stretchImage from '../images/stretching.jpg';
 import danceImage from '../images/dance.jpg';
 import kidsAeroImage from '../images/kidsaero.jpg';
 
-const Directions = () => {
+const Directions = forwardRef((props, ref) => {
     const [activeDirection, setActiveDirection] = useState('aero');
     const directions = [
         { id: 'aero', label: 'АэроCтретчинг' },
@@ -30,7 +30,7 @@ const Directions = () => {
         kidsAero: kidsAeroImage,
     }
     return (
-        <section className='bg-center bg-no-repeat min-h-[400px] lg:min-h-[700px] flex flex-col items-center py-2 mb-4 md:mb-4'>
+        <section ref={ref} className='bg-center bg-no-repeat min-h-[400px] lg:min-h-[700px] flex flex-col items-center py-2 mb-4 md:mb-6'>
             <div className="w-full max-w-[90vw] sm:max-w-[80vw] lg:max-w-[90vw] ">
                 <h2 className='text-lg md:text-xl font-bold text-dark mb-[8px] text-start lg:text-3xl lg:mb-4 font-druk'>
                 НАШИ НАПРАВЛЕНИЯ
@@ -62,6 +62,6 @@ const Directions = () => {
 
         </section>
     )
-}
+})
 
 export default Directions

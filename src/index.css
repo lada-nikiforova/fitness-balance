@@ -28,6 +28,8 @@
   --color-beige : rgba(236, 236, 236, 1);
   --color-dark : rgba(51, 51, 51, 1);
   --color-lightdark : rgba(132, 132, 132, 1);
+  --color-lightbeige : rgba(236, 236, 236, 0.66);
+  --color-gray : rgba(161, 165, 165, 1);
   --font-montserrat : "Montserrat", "sans-serif";
   --font-druk : "Druk Wide Cyr";
   --font-involve :"Involve";

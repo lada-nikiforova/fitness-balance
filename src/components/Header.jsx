@@ -1,4 +1,4 @@
-import logo from '../icons/logo3.png';
+import logo from '../icons/logosvg.svg';
 import { useState } from 'react';
 import {Link, useLocation} from 'react-router-dom';
 const Header = () => {
@@ -14,18 +14,18 @@ const Header = () => {
                     </Link>
                     <button className={`lg:hidden w-10 z-52 cursor-pointer relative flex flex-col justify-center items-center`} onClick={() => setMenuOpen(!menuOpen)}>
                         <span
-                            className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
+                            className={`absolute rounded left-0 h-0.5 bg-gray transition-transform duration-300 ease-in-out ${
                             menuOpen ? 'w-7 md:w-8 transform rotate-45 top-5 md:top-4.5' : 'w-6  rotate-0 md:top-3 top-2.5'
                             }`}
                         />
                         <span
-                            className={`absolute rounded left-0 h-0.5 bg-pink transition-transform duration-300 ease-in-out ${
+                            className={`absolute rounded left-0 h-0.5 bg-gray transition-transform duration-300 ease-in-out ${
                             menuOpen ? 'w-7 md:w-8 transform -rotate-45 bottom-3.5 md:bottom-5' : ' w-9 rotate-0 md:bottom-3.5 bottom-2.5'
                             }`}
                         />
                     </button>
                     <nav className="hidden lg:block text-center">
-                        <ul className="flex space-x-9 text-pink font-druk text-2xl">
+                        <ul className="flex space-x-9 text-gray font-druk text-2xl">
                             <li><Link to={"/"} >О нас</Link></li>
                             <li><Link to={"/raspisanye"}>Расписание</Link></li>
                             <li><a href="#" >Прайс</a></li>
@@ -37,7 +37,7 @@ const Header = () => {
                                 <img className='w-32 md:w-36' src={logo} alt="Logo"/>
                             </a>
                         </div>
-                        <ul className='flex flex-col justify-center items-center h-full text-pink font-druk text-3xl md:text-4xl gap-8 md:gap-16'>
+                        <ul className='flex flex-col justify-center items-center h-full text-gray font-druk text-3xl md:text-4xl gap-8 md:gap-16'>
                             <li ><Link to={"/"}>О нас</Link></li>
                             <li ><Link to={"/raspisanye"}>Расписание</Link></li>
                             <li><a href="#" >Прайс</a></li>

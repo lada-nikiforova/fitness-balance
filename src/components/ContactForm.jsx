@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import InputMask from 'react-input-mask';
-import PhoneInput from 'react-phone-number-input';
 import Cleave from 'cleave.js/react';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -66,41 +64,47 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-6 text-xs md:text-sm lg:text-xl' >
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"></input>
+    <form onSubmit={handleSubmit} action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-4 text-beige lg:flex-row lg:items-end lg:justify-between lg:gap-6 text-xs md:text-sm lg:text-xl mb-4' >
+      <input type="hidden" name="access_key" value="fd569228-b76b-448b-9590-490f330cbb20"></input>
       <div className="lg:min-w-[150px] lg:max-w-[240px]" >
-        <label className="block font-medium mb-1" htmlFor="name">
+        <label className="block  font-medium mb-1" htmlFor="name">
           Имя
         </label>
         <input
           id="name"
           name="name"
           type="text"
+          placeholder='Ваше имя'
           value={formData.name}
           onChange={handleChange}
-          className={`w-full px-4 py-2 border border-dark rounded-[20px] focus:outline-none focus:ring ${
-            errors.name ? 'border-red-500' : 'focus:ring-pink'
+          className={`w-full px-4 py-2 border-b-2 border-dark placeholder:text-lightbeige bg-transparent focus:outline-none focus:ring-0 focus:border-pink ${
+            errors.name ? 'border-red-500' : ''
           }`}
         />
         {errors.name && <p className="text-red-500 mt-1">{errors.name}</p>}
       </div>
 
-      <div className="flex-1 lg:min-w-[180px] lg:max-w-[280px]">
+      <div className="relative flex-1 lg:min-w-[200px] lg:max-w-[280px]">
         <label className="block  font-medium mb-1" htmlFor="phone">
           Телефон
         </label>
         
         <Cleave
-          options={{ prefix: '+7', blocks: [2, 0, 3, 0, 3, 2, 2], delimiters: [' ','(', ')', ' ', '-',  '-', '-'], numericOnly: true }}
+          options={{prefix:'+7', blocks: [2, 0, 3, 0, 3, 2, 2], delimiters: [' ','(', ')', ' ', '-',  '-', '-'], numericOnly: true, noImmediatePrefix: false, }}
           id="phone"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className={`w-full px-4 py-2 border border-dark rounded-[20px] focus:outline-none focus:ring ${
-            errors.phone ? 'border-red-500' : 'focus:ring-pink'
+          className={`w-full  px-4 py-2 border-b-2 border-dark bg-transparent focus:outline-none focus:ring-0 focus:border-pink ${
+            errors.phone ? 'border-red-500' : ''
           }`}
         />
-        {errors.phone && <p className="text-red-500  mt-1">{errors.phone}</p>}
+        {formData.phone === '' && (
+          <span className="absolute left-8 top-7 md:left-9 md:top-8 lg:left-10 lg:top-10 text-lightbeige pointer-events-none">
+            (999) 999-99-99
+          </span>
+        )}
+        {errors.phone && <p className="text-red-500 mt-1">{errors.phone}</p>}
       </div>
 
       <div className="flex-1 lg:min-w-[200px] lg:max-w-[300px]">
@@ -112,14 +116,14 @@ const ContactForm = () => {
           name="contactMethod"
           value={formData.contactMethod}
           onChange={handleChange}
-          className={`w-full px-4 py-2 border rounded-[20px] border-dark focus:outline-none focus:ring focus:ring-pink cursor-pointer ${
-            errors.contactMethod ? 'border-red-500' : 'focus:ring-pink'
+          className={`w-full px-4 py-2 border-b-2 border-dark bg-transparent focus:outline-none focus:ring-0 focus:border-pink cursor-pointer ${
+            errors.contactMethod ? 'border-red-500' : ''
           }`}
         >
-          <option value="Выберите из списка">- Выберите из списка -</option>
-          <option value="Телефон">Звонок</option>
-          <option value="Telegram">Telegram</option>
-          <option value="WhatsApp">WhatsApp</option>
+          <option  value="Выберите из списка">- Выберите из списка -</option>
+          <option className='text-dark' value="Телефон">Звонок</option>
+          <option className='text-dark' value="Telegram">Telegram</option>
+          <option className='text-dark' value="WhatsApp">WhatsApp</option>
         </select>
         {errors.contactMethod && <p className="text-red-500 mt-1">{errors.contactMethod}</p>}
       </div>
@@ -128,9 +132,9 @@ const ContactForm = () => {
         type="submit"
         className="bg-pink text-dark font-semibold
                    rounded-full px-6 lg:px-4 py-3 md:py-2 lg:py-4 cursor-pointer
-                   shadow-lg hover:shadow-xl hover:bg-[#B0B0B0] 
-                   transition-transform duration-300 transform hover:scale-105 flex-1 lg:min-w-[180px] lg:max-w-[280px]">
+                   shadow-lg hover:shadow-xl flex-1 lg:min-w-[180px] lg:max-w-[280px]">
                     Отправить заявку</button>
+        
     </form>
   );
 };
