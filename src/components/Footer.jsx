@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../icons/logosvg.svg';
+import logo from '../icons/logo3.png';
 import { Link } from 'react-router-dom';
 
 const Footer = ({scrollTo}) => {
