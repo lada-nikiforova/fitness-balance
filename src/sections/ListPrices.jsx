@@ -29,7 +29,7 @@ const ListPrices = () => {
             <button id='adult' onClick={()=>setActiveButton('adult')} className={`${activeButton === 'adult' && ' py-1 lg:py-2 bg-beige px-3 lg:px-4 shadow-xl rounded-full'}`}>Взрослые</button>
             <button id='kids' onClick={()=>setActiveButton('kids')} className={`${activeButton === 'kids' && ' py-1 lg:py-2 bg-beige px-3 shadow-xl lg:px-4  rounded-full'}`}>Детские</button>
         </div>
-        <div className="w-full h-75 overflow-x-auto overflow-y-visible  mt-4">
+        <div className="w-full h-75 overflow-x-auto mt-4">
             <div key={activeButton} className="flex flex-nowrap items-stretch gap-3 px-3 animate-fadeIn">
                 {data[activeButton].map((item) => (
                     <CardPrice key={item.id} label={item.label} price={item.price} rules={item.rules} price1={item.price1} />
