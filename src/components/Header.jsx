@@ -28,7 +28,7 @@ const Header = () => {
                         <ul className="flex space-x-9 text-gray font-druk text-2xl">
                             <li><Link to={"/"} >О нас</Link></li>
                             <li><Link to={"/raspisanye"}>Расписание</Link></li>
-                            <li><a href="#" >Прайс</a></li>
+                            <li><Link to={"/price"}>Прайс</Link></li>
                         </ul>
                     </nav>
                     {menuOpen && <nav className='lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
@@ -38,9 +38,9 @@ const Header = () => {
                             </a>
                         </div>
                         <ul className='flex flex-col justify-center items-center h-full text-gray font-druk text-3xl md:text-4xl gap-8 md:gap-16'>
-                            <li ><Link to={"/"}>О нас</Link></li>
-                            <li ><Link to={"/raspisanye"}>Расписание</Link></li>
-                            <li><a href="#" >Прайс</a></li>
+                            <li><Link to={"/"}>О нас</Link></li>
+                            <li><Link to={"/raspisanye"}>Расписание</Link></li>
+                            <li><Link to={"/price"}>Прайс</Link></li>
                         </ul>
                     </nav>}
                 </div>

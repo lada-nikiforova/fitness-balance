@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poiret+One&display=swap');
-@import url('https://db.onlinewebfonts.com/c/e7fa3e0f70e1466b2f73ee1ac39c8c30?family=Druk+Wide+Cyr');
+/*@import url('https://db.onlinewebfonts.com/c/e7fa3e0f70e1466b2f73ee1ac39c8c30?family=Druk+Wide+Cyr'); */
 @font-face {
   font-family: 'Involve';
   src: url('../src/fonts/Involve-Regular.ttf') format('truetype');
@@ -19,7 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Druk Wide Cyr';
+  src: url('../src/fonts/Druk Wide Cyr.woff2') ;
+}
+
 @import "tailwindcss";
+
 
 
 @theme {
@@ -33,4 +39,11 @@
   --font-montserrat : "Montserrat", "sans-serif";
   --font-druk : "Druk Wide Cyr";
   --font-involve :"Involve";
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: 'translateY(10px)'; }
+    100% { opacity: 1; transform: 'translateY(0)'; }
+  }
 }
+
+

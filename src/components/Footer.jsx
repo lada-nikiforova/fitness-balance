@@ -13,9 +13,9 @@ const Footer = ({scrollTo}) => {
           <a href="">О студии</a>
           <a onClick={scrollTo}>Направления</a>
           <Link to={"/raspisanye"}>Расписание</Link>
-          <a href="">Прайс</a>
+          <Link to={"/price"}>Прайс</Link>
         </div>
-        <div className='flex flex-row w-76 md:w-100 justify-between px-2 mb-5 md:mb-7'>
+        <div className='flex flex-row w-73 md:w-100 justify-between px-2 mb-5 md:mb-7'>
           <div>
             <p><span className='text-lightbeige'>АДРЕС</span> <br />Черкесская 18</p>
           </div>
@@ -41,6 +41,7 @@ const Footer = ({scrollTo}) => {
 
       </div>
       <p className='text-lightbeige m-2 lg:text-center'>© 2025 все права защищены</p>
+      <a className='text-lightbeige m-2 text-sm md:text-base lg:text-lg block lg:text-center' href="https://t.me/ladosq ">Сайт разработала Лада Никифорова</a>
         
       
     </footer>
