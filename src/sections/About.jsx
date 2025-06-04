@@ -12,7 +12,7 @@ const About = ({scrollTo}) => {
                    shadow-lg hover:shadow-xl hover:bg-[#B0B0B0] 
                    transition-transform duration-300 transform hover:scale-105'>Записаться</button>
         </div>
-      
+
     </section>
   )
 }
