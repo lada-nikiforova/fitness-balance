@@ -25,7 +25,7 @@ const Header = () => {
                         />
                     </button>
                     <nav className="hidden lg:block text-center">
-                        <ul className="flex space-x-9 text-gray font-druk text-2xl">
+                        <ul className="flex space-x-9 tracking-wider text-gray font-druk text-2xl">
                             <li><Link to={"/"} >О нас</Link></li>
                             <li><Link to={"/raspisanye"}>Расписание</Link></li>
                             <li><Link to={"/price"}>Прайс</Link></li>
@@ -37,7 +37,7 @@ const Header = () => {
                                 <img className='w-32 md:w-36' src={logo} alt="Logo"/>
                             </a>
                         </div>
-                        <ul className='flex flex-col justify-center items-center h-full text-gray font-druk text-3xl md:text-4xl gap-20 md:gap-24'>
+                        <ul className='flex flex-col justify-center items-center h-full tracking-wider text-gray font-druk text-3xl md:text-4xl gap-20 md:gap-24'>
                             <li><Link to={"/"}>О нас</Link></li>
                             <li><Link to={"/raspisanye"}>Расписание</Link></li>
                             <li><Link to={"/price"}>Прайс</Link></li>
