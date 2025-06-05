@@ -32,7 +32,7 @@ const Directions = forwardRef((props, ref) => {
     return (
         <section ref={ref} className='bg-center bg-no-repeat min-h-[400px] lg:min-h-[700px] flex flex-col items-center py-2 mb-4 md:mb-6'>
             <div className="w-full max-w-[90vw] sm:max-w-[80vw] lg:max-w-[90vw] ">
-                <h2 className='text-lg md:text-xl font-bold text-dark mb-[8px] text-start lg:text-3xl lg:mb-4 font-druk'>
+                <h2 className='text-lg tracking-wider md:text-xl font-bold text-dark mb-[8px] text-start lg:text-3xl lg:mb-4 font-druk'>
                 НАШИ НАПРАВЛЕНИЯ
                 </h2>
             </div>

@@ -32,12 +32,12 @@ const Header = () => {
                         </ul>
                     </nav>
                     {menuOpen && <nav className='lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
-                        <div className='px-10 md:px-13 py-1.5 md:py-2'>
+                        <div className='px-10 md:px-13 pt-1.5 md:pt-2'>
                             <a href="#">
                                 <img className='w-32 md:w-36' src={logo} alt="Logo"/>
                             </a>
                         </div>
-                        <ul className='flex flex-col justify-center items-center h-full text-gray font-druk text-3xl md:text-4xl gap-8 md:gap-16'>
+                        <ul className='flex flex-col justify-center items-center h-full text-gray font-druk text-3xl md:text-4xl gap-20 md:gap-24'>
                             <li><Link to={"/"}>О нас</Link></li>
                             <li><Link to={"/raspisanye"}>Расписание</Link></li>
                             <li><Link to={"/price"}>Прайс</Link></li>
