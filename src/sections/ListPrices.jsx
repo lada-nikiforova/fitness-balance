@@ -22,7 +22,7 @@ const ListPrices = () => {
             { id: 'less12_k', label: '12 ЗАНЯТИЙ', price: '5200 P', rules: '· срок действия 1 месяц\n· перерасчет при предъявлении справки от врача', price1: 'цена за занятие 433р', ref: 'https://qr.nspk.ru/AS20001JIS9LFDP08BJQKMCAQC90O05C?type=01&bank=100000000284&sum=520000&cur=RUB&crc=EF4D' },
         ],
         dance: [
-            {id: 'dance16', label: '8 ЗАНЯТИЙ', price: '4500 Р', rules: '· 7 тренировок и проф. съемка на 8 тренировке\n · присоединится можно не позднее 3-ий тренировки (буден перерасчет)\n ·новый набор в начале каждого месяца ', ref: 'https://qr.nspk.ru/AS20006VSOSAUIS48P18RABFIKC3ORB7?type=01&bank=100000000284&sum=450000&cur=RUB&crc=2C55' }
+            {id: 'dance16', label: '8 ЗАНЯТИЙ', price: '4500 Р', rules: '· 7 тренировок и проф. съемка на 8 тренировке\n · присоединится можно не позднее 3-ий тренировки (будет перерасчет)\n ·новый набор в начале каждого месяца ', ref: 'https://qr.nspk.ru/AS20006VSOSAUIS48P18RABFIKC3ORB7?type=01&bank=100000000284&sum=450000&cur=RUB&crc=2C55' }
         ]
     };
   return (

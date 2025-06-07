@@ -4,6 +4,8 @@ import About from '../sections/About'
 import Directions from '../sections/Directions'
 import Contact from '../sections/Contact'
 import Footer from '../components/Footer'
+import WhyWe from '../sections/WhyWe'
+
 
 const Home = () => {
   const contactRef = useRef(null);
@@ -24,6 +26,7 @@ const Home = () => {
       <Header/>
       <main>
         <About scrollTo={() => scrollToRef(contactRef)} />
+        <WhyWe/>
         <Directions ref = {directionsRef}/>
         <Contact ref={contactRef}/>
       </main>
