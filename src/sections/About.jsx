@@ -1,4 +1,4 @@
-import back from '../images/fitness.jpg'
+import back from '../images/hall.jpg'
 
 const About = ({scrollTo}) => {
   return (

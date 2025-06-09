@@ -1,9 +1,11 @@
 import { forwardRef, useState } from 'react';
-import aeroImage from '../images/aerostretching.jpg';
-import mfrImage from '../images/mfr.jpg';
-import stretchImage from '../images/stretching.jpg';
-import danceImage from '../images/dance.jpg';
-import kidsAeroImage from '../images/kidsaero.jpg';
+import aeroImage from '../images/hands.jpg';
+import mfrImage from '../images/attribute.jpg';
+import stretchImage from '../images/gym.jpg';
+import danceKidsImage from '../images/legs.jpg';
+import kidsAeroImage from '../images/hallplus.jpg';
+import danceImage from '../images/legsCarpets.jpg';
+import ofpImage from '../images/box.jpg';
 
 const Directions = forwardRef((props, ref) => {
     const [activeDirection, setActiveDirection] = useState('aero');
@@ -12,6 +14,7 @@ const Directions = forwardRef((props, ref) => {
         { id: 'mfr', label: 'МФР+Растяжка' },
         { id: 'stretch', label: 'Растяжка' },
         { id: 'dance', label: 'Танцы'},
+        { id: 'ofp', label: 'ОФП от 3-5 лет'},
         { id: 'kidsDance', label: 'Танцы для детей' },
         { id: 'kidsAero', label: 'АэроЙога для детей' },
     ];
@@ -23,13 +26,16 @@ const Directions = forwardRef((props, ref) => {
         dance: 'Тренировки по танцам – это увлекательное и динамичное занятие, которое сочетает в себе физическую активность, креативность и саморазвитие.\n Приобретая абонемент на 8 занятий вы получаете: 7 тренировок с изучением и отработкой хореографии, на 8-ой тренировке происходит съемка данной хореографии (каждый месяц новая хореография). Видео вы получаете после обработки в телеграмм или любую другую соц.сеть.',
         kidsDance: 'Танцы для детей — это весёлые, энергичные и развивающие занятия, которые помогают детям раскрыть творческий потенциал и улучшить координацию.',
         kidsAero: 'АэроЙога для детей — это уникальный и увлекательный вид физической активности, который сочетает элементы йоги, гимнастики и антигравитационной практики.\nЗанятия проводятся с использованием специальных подвесных полотен (гамака), что позволяет детям выполнять различные асаны в воздухе, развивая гибкость, силу и координацию.',
+        ofp: 'Общая физическая подготовка для детей 3-5 лет — это программа, направленная на развитие основных физических качеств у малышей, таких как сила, гибкость, координация, выносливость и ловкость.\n Занятия ОФП помогают детям укрепить здоровье, развить двигательные навыки и подготовить их к более сложным видам физической активности в будущем.'
     };
     const directionImage = {
         aero: aeroImage,
         mfr: mfrImage,
         stretch: stretchImage,
-        kidsDance: danceImage,
+        dance: danceImage,
+        kidsDance: danceKidsImage,
         kidsAero: kidsAeroImage,
+        ofp: ofpImage,
     }
     return (
         <section ref={ref} className='bg-center bg-no-repeat min-h-[400px] lg:min-h-[700px] flex flex-col items-center py-2 mb-4 md:mb-6'>

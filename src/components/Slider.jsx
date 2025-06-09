@@ -3,40 +3,27 @@ import React, { useRef, useEffect, useState } from 'react';
 const slides = [
   {
     id: 1,
-    content: (
-      <p className="font-bold ">
-        Первая студия в ЖК "Анкудиновский парк" с занятиями на гамаках
-      </p>
-    ),
+    label: 'Первая студия в ЖК "Анкудиновский парк" с занятиями на гамаках',
   },
   {
     id: 2,
-    content: (
-      <>
-        <p className="font-bold mb-1 ">Индивидуальный подход к каждому</p>
-        <p>Мини-группы до 6 человек. Контроль техники каждого движения.</p>
-      </>
-    ),
+    label: 'Индивидуальный подход к каждому',
+    text: 'Мини-группы до 6 человек. Контроль техники каждого движения.',
   },
   {
     id: 3,
-    content: (
-        <>
-        <p className="font-bold   mb-1">Разнообразные программы для взрослых и детей</p>
-        <p>Широкий выбор программ, что позволяет каждому найти что-то по душе</p>
-        </>
-      
-    ),
+    label: 'Различные программы для взрослых и детей',
+    text: 'Широкий выбор программ, что позволяет каждому найти что-то по душе',
   },
   {
     id: 4,
-    content: (
-        <>
-        <p className="font-bold  mb-1">Уютная студия в светлых пастельных тонах</p>
-        <p>Cоздается атмосфера комфорта и спокойствия, куда хочется возвращаться снова.</p>
-        </>
-      
-    ),
+    label: '1 абонемент = 3 направления',
+    text: 'Покупая взрослый абонемент, вы можете посещать любые направления по вашему выбору до окончания количества занятий.',
+  },
+  {
+    id: 5,
+    label: 'Уютная студия в светлых тонах',
+    text: 'Cоздается атмосфера комфорта и спокойствия, куда хочется возвращаться снова.',
   },
 
 ];
@@ -80,18 +67,19 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full max-w-[90vw] md:max-w-[70vw]">
+    <div className="overflow-hidden w-full max-w-[90vw] md:max-w-[70vw] lg:max-w-[60vw] ">
       {/* Слайдер */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory gap-4 p-3 text-sm md:text-lg lg:text-2xl"
+        className=" flex overflow-x-auto text-center scroll-smooth no-scrollbar snap-x snap-mandatory gap-4 py-2 px-1 text-sm md:text-lg lg:text-2xl"
       >
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="w-full shrink-0 snap-center bg-lightdark rounded-3xl shadow-md shadow-pink inset-shadow-sm inset-shadow-dark px-6 py-5 text-beige"
+            className="w-full shrink-0 text-shadow-xs flex flex-col justify-center snap-center bg-gray rounded-3xl shadow-md shadow-pink inset-shadow-dark px-6 py-5 text-dark"
           >
-            {slide.content}
+            <p className='font-bold  rounded-2xl text-[16px] mb-2'>{slide.label}</p>
+            <p>{slide.text}</p>
           </div>
         ))}
       </div>
@@ -103,7 +91,7 @@ const Slider = () => {
             key={index}
             onClick={() => scrollToSlide(index)}
             className={`w-3 h-3 rounded-full ${
-              index === activeIndex ? 'bg-pink' : 'bg-gray-400'
+              index === activeIndex ? 'bg-pink' : 'bg-gray'
             } transition-all duration-300`}
           />
         ))}
