@@ -38,7 +38,7 @@ const Slider = () => {
     const interval = setInterval(() => {
       const nextIndex = (activeIndex + 1) % slides.length;
       scrollToSlide(nextIndex);
-    }, 4000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [activeIndex]);

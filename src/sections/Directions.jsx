@@ -1,11 +1,11 @@
 import { forwardRef, useState } from 'react';
-import aeroImage from '../images/hands.jpg';
-import mfrImage from '../images/attribute.jpg';
-import stretchImage from '../images/gym.jpg';
-import danceKidsImage from '../images/legs.jpg';
-import kidsAeroImage from '../images/hallplus.jpg';
-import danceImage from '../images/legsCarpets.jpg';
-import ofpImage from '../images/box.jpg';
+import aeroImage from '../images/hands.webp';
+import mfrImage from '../images/attribute.webp';
+import stretchImage from '../images/gym.webp';
+import danceKidsImage from '../images/legs.webp';
+import kidsAeroImage from '../images/hallplus.webp';
+import danceImage from '../images/legsCarpets.webp';
+import ofpImage from '../images/box.webp';
 
 const Directions = forwardRef((props, ref) => {
     const [activeDirection, setActiveDirection] = useState('aero');
