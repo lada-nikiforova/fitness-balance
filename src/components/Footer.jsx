@@ -14,7 +14,8 @@ const Footer = () => {
           <Link to={'/'}>О студии</Link>
           <Link to={"/raspisanye"}>Расписание</Link>
           <Link to={"/price"}>Прайс</Link>
-          <Link to={"/agreement"}>Договор</Link>
+          <Link to={"/agreement"}>Публичная оферта</Link>
+          <Link to={"/privacy"}>Обработка персональных данных</Link>
         </div>
         <div className='flex flex-row w-73 md:w-100 justify-between px-2 mb-5 md:mb-7'>
           <div>

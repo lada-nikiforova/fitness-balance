@@ -6,7 +6,7 @@ const Agreement = () => {
             window.scrollTo(0, 0); 
         }, []);
   return (
-    <div >
+    <div>
         <Header/>
         <main className='px-10 pt-16 md:pt-17 lg:pt-30 text-base md:text-lg lg:text-xl mb-4'>
             <h1 className='text-center font-bold'>ПУБЛИЧНАЯ ОФЕРТА НА ЗАКЛЮЧЕНИЕ ДОГОВОРА НА ОКАЗАНИЕ УСЛУГ</h1>
