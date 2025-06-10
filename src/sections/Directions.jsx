@@ -39,13 +39,13 @@ const Directions = forwardRef((props, ref) => {
     }
     return (
         <section ref={ref} className='bg-center bg-no-repeat min-h-[400px] lg:min-h-[700px] flex flex-col items-center py-2 mb-4 md:mb-6'>
-            <div className="w-full max-w-[90vw] sm:max-w-[80vw] lg:max-w-[90vw] ">
+            <div className="w-full max-w-[90vw] sm:max-w-[70vw] lg:max-w-[90vw] ">
                 <h2 className='text-lg tracking-wider md:text-xl font-bold text-dark mb-[8px] text-start lg:text-3xl lg:mb-4 font-druk'>
                 НАШИ НАПРАВЛЕНИЯ
                 </h2>
             </div>
             <div className='flex flex-col md:flex-row justify-between text-xs md:text-sm lg:text-2xl md:max-w-[90vw] sm:max-w-[80vw]'>
-                <div className='bg-white w-full max-w-[90vw] sm:max-w-[80vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:min-h-[400px] lg:min-h-[620px] md:mr-[15px] lg:mr-[20px] flex flex-col justify-between lg:p-[20px]'>
+                <div className='bg-white w-full max-w-[90vw] sm:max-w-[70vw] min-h-[215px] rounded-[16px] shadow-sm p-[14px] mb-[12px] md:min-h-[400px] lg:min-h-[620px] md:mr-[15px] lg:mr-[20px] flex flex-col justify-between lg:p-[20px]'>
                     <div className='flex flex-wrap gap-[5px] mb-[8px] lg:gap-[8px]'>
                     {directions.map(({ id, label }) => ( 
                         <button key={id} className={`border-[1px] md:border-[2px] font-bold rounded-full text-center px-[14px] lg:px-[24px] py-[6px] lg:py-[12px]  cursor-pointer shadow-sm hover:shadow-xl
@@ -61,8 +61,8 @@ const Directions = forwardRef((props, ref) => {
                     </div>
                     
                 </div>
-                <div className='bg-white w-full max-w-[90vw] sm:max-w-[80vw] h-[260px] md:h-[400px]  lg:h-[620px] rounded-[16px] shadow-sm'>
-                        <img className='w-full h-full object-cover  rounded-2xl' src={directionImage[activeDirection]} />  
+                <div className='bg-white w-full max-w-[90vw] sm:max-w-[70vw] h-[260px] md:h-[400px]  lg:h-[620px] rounded-[16px] shadow-sm'>
+                        <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
                 </div>
 
             </div>

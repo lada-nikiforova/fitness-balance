@@ -1,8 +1,9 @@
 import React from 'react'
 import logo from '../icons/logo3.png';
 import { Link } from 'react-router-dom';
+import Agreement from '../pages/Agreement';
 
-const Footer = ({scrollTo}) => {
+const Footer = () => {
   return (
     <footer className='bg-dark text-beige text-base md:text-lg lg:text-xl w-full p-5 md:py-7 md:px-10 lg:py-10 lg:px-13'>
       <div className='lg:flex lg:justify-center lg:gap-15'>
@@ -10,10 +11,10 @@ const Footer = ({scrollTo}) => {
           <img className='w-42 md:w-46 lg:w-50 mb-5 md:mb-7' src={logo} alt="Logo"/>
         </Link>
         <div className='flex flex-col gap-2 ml-2 mb-5 md:mb-7'>
-          <a href="">О студии</a>
-          <a onClick={scrollTo}>Направления</a>
+          <Link to={'/'}>О студии</Link>
           <Link to={"/raspisanye"}>Расписание</Link>
           <Link to={"/price"}>Прайс</Link>
+          <Link to={"/agreement"}>Договор</Link>
         </div>
         <div className='flex flex-row w-73 md:w-100 justify-between px-2 mb-5 md:mb-7'>
           <div>

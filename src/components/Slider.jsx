@@ -71,14 +71,14 @@ const Slider = () => {
       {/* Слайдер */}
       <div
         ref={containerRef}
-        className=" flex overflow-x-auto text-center scroll-smooth no-scrollbar snap-x snap-mandatory gap-4 py-2 px-1 text-sm md:text-lg lg:text-2xl"
+        className=" flex overflow-x-auto text-center scroll-smooth no-scrollbar snap-x snap-mandatory gap-4 py-2 px-2 text-sm md:text-lg lg:text-2xl"
       >
         {slides.map((slide) => (
           <div
             key={slide.id}
             className="w-full shrink-0 text-shadow-xs flex flex-col justify-center snap-center bg-gray rounded-3xl shadow-md shadow-pink inset-shadow-dark px-6 py-5 text-dark"
           >
-            <p className='font-bold  rounded-2xl text-[16px] mb-2'>{slide.label}</p>
+            <p className='font-bold  rounded-2xl text-base md:text-xl lg:text-[26px] mb-2'>{slide.label}</p>
             <p>{slide.text}</p>
           </div>
         ))}

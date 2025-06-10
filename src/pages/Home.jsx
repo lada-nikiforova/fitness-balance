@@ -30,7 +30,7 @@ const Home = () => {
         <Directions ref = {directionsRef}/>
         <Contact ref={contactRef}/>
       </main>
-      <Footer scrollTo={() => scrollToRef(directionsRef)} />
+      <Footer/>
     </div>
   )
 }
