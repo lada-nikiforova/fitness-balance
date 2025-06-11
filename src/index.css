@@ -3,6 +3,7 @@
 @font-face {
   font-family: 'Druk Wide Cyr';
   src: url('../src/fonts/Druk Wide Cyr.woff2') ;
+  font-display: swap;
 }
 
 

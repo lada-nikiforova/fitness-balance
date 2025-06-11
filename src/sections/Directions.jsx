@@ -62,7 +62,7 @@ const Directions = forwardRef((props, ref) => {
                     
                 </div>
                 <div className='bg-white w-full max-w-[90vw] sm:max-w-[70vw] h-[260px] md:h-[400px]  lg:h-[620px] rounded-[16px] shadow-sm'>
-                        <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} />  
+                        <img className='w-full h-full object-cover rounded-2xl' src={directionImage[activeDirection]} alt='image'/>  
                 </div>
 
             </div>

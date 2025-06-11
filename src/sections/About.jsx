@@ -2,9 +2,16 @@ import back from '../images/hall.webp'
 
 const About = ({scrollTo}) => {
   return (
-    <section className="bg-cover bg-center bg-no-repeat h-120 lg:h-200 flex items-center justify-center mb-3 md:mb-6 " 
-            style={{ backgroundImage: `linear-gradient(rgba(34, 30, 30, 0.44), rgba(34, 30, 30, 0.7)), url(${back})`}} >
-        <div className='flex flex-col items-center justify-center ml-1 mr-1 gap-2 lg:gap-4 px-4'>
+    <section className="relative h-120 lg:h-200 flex items-center justify-center mb-3 md:mb-6 overflow-hidden " >
+        <img 
+          src={back} 
+          alt="Фон" 
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          loading="eager"
+          fetchpriority="high" 
+        />
+        <div className="absolute inset-0 bg-[rgba(34,30,30,0.5)] z-10" />
+        <div className='flex flex-col z-20 items-center justify-center ml-1 mr-1 gap-2 lg:gap-4 px-4'>
             <h1 className='text-center text-beige text-lg md:text-2xl lg:text-4xl font-druk drop-shadow-sm tracking-wider'>СТУДИЯ РАСТЯЖКИ И ТАНЦЕВ<br/>В НИЖНЕМ НОВГОРОДЕ</h1>
             <p className='text-center text-beige text-[16px] leading-5 lg:leading-10 md:text-xl lg:text-4xl font drop-shadow-sm mb-3 md:mb-5'>Здоровье — это стиль жизни.<br/> <span className='text-pink font-bold'>BALANCE</span> — его начало.</p>
             <button onClick={scrollTo} className=' bg-pink text-dark font-druk text-xs md:text-lg lg:text-2xl 
