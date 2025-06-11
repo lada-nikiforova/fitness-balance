@@ -76,9 +76,9 @@ const Slider = () => {
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="w-full shrink-0 text-shadow-xs flex flex-col justify-center snap-center bg-gray rounded-3xl shadow-md shadow-pink inset-shadow-dark px-6 py-5 text-dark"
+            className="w-full shrink-0  flex flex-col justify-center snap-center bg-gray rounded-3xl shadow-md shadow-pink inset-shadow-dark px-6 py-5 text-dark"
           >
-            <p className='font-bold  rounded-2xl text-base md:text-xl lg:text-[26px] mb-2'>{slide.label}</p>
+            <p className='font-bold text-shadow-xs rounded-2xl text-base md:text-xl lg:text-[26px] mb-2'>{slide.label}</p>
             <p>{slide.text}</p>
           </div>
         ))}

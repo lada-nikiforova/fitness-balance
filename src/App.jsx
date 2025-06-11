@@ -8,7 +8,7 @@ import Privacy from "./pages/Privacy";
 function App() {
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="min-h-screen bg-beige font-montserrat">
         <Routes>
             <Route path="/" element={<Home/>}/>
@@ -18,7 +18,7 @@ function App() {
             <Route path="/privacy" element={<Privacy/>}/>
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
