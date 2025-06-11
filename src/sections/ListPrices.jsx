@@ -11,7 +11,7 @@ const ListPrices = () => {
         adult: [
             { id: 'trial', label: 'ПРОБНОЕ', price: '300 P', ref:'https://qr.nspk.ru/AS20000IC4D8F7KS88KABDMGOARCO5T4?type=01&bank=100000000284&sum=30000&cur=RUB&crc=2F69' },
             { id: 'less1', label: 'РАЗОВОЕ', price: '600 P', ref: 'https://qr.nspk.ru/AS20006AJEIBIUQR9NLOUU0G7GEVIDLG?type=01&bank=100000000284&sum=60000&cur=RUB&crc=65E3' },
-            { id: 'less1_k', label: 'ИНДИВИДУАЛЬНОЕ', price: '1500 P',  ref: ''},
+            { id: 'less1_k', label: 'ИНДИВИДУАЛЬНОЕ', price: '1500 P', rules: 'Индивидуальные тренировки - это занятие, которое тренер проводит специально для вас, с учетом ваших целей, физической формы, индивидуальных особенностей и пожеланий.',  ref: 'https://qr.nspk.ru/AS200036S5IQO8MJ8E19VIV2CLO159D1?type=01'},
             { id: 'less4', label: '4 ЗАНЯТИЯ', price: '2200 P', rules: `· срок действия 1 месяц\n· посещение занятий по всем взрослым направлениям, кроме танцев 16+`, price1: 'цена за занятие 550р', ref:'https://qr.nspk.ru/AS200058A6TTCS2M97QBO0F9E0QF2Q5C?type=01&bank=100000000284&sum=220000&cur=RUB&crc=8B05' },
             { id: 'less8', label: '8 ЗАНЯТИЙ', price: '4000 P', rules: '· срок действия 1 месяц\n· посещение занятий по всем взрослым направлениям, кроме танцев 16+', price1: 'цена за занятие 500р', ref: 'https://qr.nspk.ru/AS20007E5EHFJ93K81L87TOSML2OOOH9?type=01&bank=100000000284&sum=400000&cur=RUB&crc=8909' },
             { id: 'less12', label: '12 ЗАНЯТИЙ', price: '5400 P', rules: '· срок действия 1 месяц\n· посещение занятий по всем взрослым направлениям, кроме танцев 16+', price1: 'цена за занятие 450р', ref:'https://qr.nspk.ru/BS2000337ORTH9RM9AUO44707PHSGAO9?type=01&bank=100000000284&sum=540000&cur=RUB&crc=389C' },
@@ -19,7 +19,7 @@ const ListPrices = () => {
         kids: [
             { id: 'trial_k', label: 'ПРОБНОЕ', price: '300 P',  ref:'https://qr.nspk.ru/AS20000IC4D8F7KS88KABDMGOARCO5T4?type=01&bank=100000000284&sum=30000&cur=RUB&crc=2F69' },
             { id: 'less1_k', label: 'РАЗОВОЕ', price: '600 P',  ref: 'https://qr.nspk.ru/AS20006AJEIBIUQR9NLOUU0G7GEVIDLG?type=01&bank=100000000284&sum=60000&cur=RUB&crc=65E3'},
-            { id: 'less1_k', label: 'ИНДИВИДУАЛЬНОЕ', price: '1500 P',  ref: ''},
+            { id: 'less1_k', label: 'ИНДИВИДУАЛЬНОЕ', price: '1500 P', rules: 'Индивидуальные тренировки - это занятие, которое тренер проводит специально для вас, с учетом ваших целей, физической формы, индивидуальных особенностей и пожеланий.',  ref: 'https://qr.nspk.ru/AS200036S5IQO8MJ8E19VIV2CLO159D1?type=01'},
             { id: 'less4_k', label: '4 ЗАНЯТИЯ', price: '2100 P', rules: '· срок действия 1 месяц\n · перерасчет при предъявлении справки от врача', price1: 'цена за занятие 525р', ref: 'https://qr.nspk.ru/BS200048Q4PN9TJ29SKPD2K1N1V62528?type=01&bank=100000000284&sum=210000&cur=RUB&crc=ACE1' },
             { id: 'less8_k', label: '8 ЗАНЯТИЙ', price: '3900 P', rules: '· срок действия 1 месяц\n · перерасчет при предъявлении справки от врача', price1: 'цена за занятие 487р', ref: 'https://qr.nspk.ru/BS20001L2I8RJ6TF99BBCDKJKCE0DDEA?type=01&bank=100000000284&sum=390000&cur=RUB&crc=F736' },
             { id: 'less12_k', label: '12 ЗАНЯТИЙ', price: '5200 P', rules: '· срок действия 1 месяц\n· перерасчет при предъявлении справки от врача', price1: 'цена за занятие 433р', ref: 'https://qr.nspk.ru/AS20001JIS9LFDP08BJQKMCAQC90O05C?type=01&bank=100000000284&sum=520000&cur=RUB&crc=EF4D' },
