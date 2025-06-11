@@ -8,7 +8,7 @@ const About = ({scrollTo}) => {
           alt="Фон" 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           loading="eager"
-          fetchpriority="high" 
+          fetchPriority="high" 
         />
         <div className="absolute inset-0 bg-[rgba(34,30,30,0.5)] z-10" />
         <div className='flex flex-col z-20 items-center justify-center ml-1 mr-1 gap-2 lg:gap-4 px-4'>
